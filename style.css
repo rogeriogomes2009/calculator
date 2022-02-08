@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');  
+
+#background{position: fixed; width: 100% ; height:100% ;object-fit: cover; z-index: -10;}
+#divLogo{display:flex; position:fixed; top:0;left: 50%;transform: translateX(-50%);width: 65%;height: 150px; justify-content: center;}
+    #logoTexto{font: 70px Roboto, sans-serif; color: white; font-weight: 700; margin:29px 0 0 5px; text-shadow: 1px 1px 12px black}
+    #logoImg{height:78%; margin: 8px;}
+
+#caixa{width: 60%;position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%);display:flex ;flex-wrap: wrap; flex-direction:row; justify-content: space-around;  background-color: rgba(0, 0, 0, 0.5); z-index: -10; border-radius: 50px; box-shadow:  0 0 3em rgba(0, 0, 0, 0.5)}
+.iconesMenu{display:flex; transform: scale(1);border-radius: 100%; min-width: 180px; height: 180px; justify-content: center; margin: 40px; box-shadow:  0 0 3em rgba(0, 0, 0, 1); cursor: pointer;}
+.iconInfo{position: absolute; opacity: 0; transition: All 0.2s;background-color: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 180px; height: 180px;}
+    .infoText{font: 20px Roboto, sans-serif; color: white; text-align: center; padding-top: 70px; letter-spacing: 1px; }
+    .iconInfo:hover{opacity: 1}
+
+#circle1{width: 100vw; height: 100vw; position: fixed; z-index: -10; top: 50%; transform: translate(0, -50%) scale(0); border-radius: 100%; z-index: 4; min-height: 100%}
+#circle2{width: 100vw; height: 100vw; position: fixed; z-index: -10; top: 50%; transform: translate(0, -50%) scale(0); border-radius: 100%; z-index: 4; min-height: 100%}
+
+    #imgDecoder{opacity: 0; transition: opacity 2s; object-fit: contain; cursor: pointer;}
+    #imgCalc{opacity: 0; transition: opacity 2s; object-fit: contain; cursor: pointer;}
+
+    #divCalculadora{position:absolute; width: 480px; margin:60px; transform: scale(0.00);margin-left: auto; margin-right: auto; left: 0; right: 0; z-index: 5;}
+    #Calculadora{width: 100%;}
+    #displayBox{position:absolute;width: 240px; height: 75px; margin-left: auto; margin-right: auto;left: 0;right: 0; top: 52px; overflow: auto;}
+    #display{margin: 0; position: absolute; top: 50%; right:1px ;transform: translate(0, -50%); font: 50px 'Roboto', sans-serif; font-weight:700; text-align-last: right; color:white}
+
+.botoes{background: transparent;  z-index: 6; position: absolute; top: 40%; left: 50%;}
+.botoes:hover{filter: brightness(90%);}
+.botoes:active{filter: brightness(50%);}
+#textoBot{position: absolute;top: 49%; left: 50%; transform: translate(-50%, -50%); font-family: 'Roboto', sans-serif; font-size:xx-large ; color: white;font-weight:700;}
+
+    #num1{transform: translate(-205%, -29%); border:none}
+    #num2{transform: translate(-103%, -29%); border:none}
+    #num3{transform: translate(3%, -29%); border:none}
+    #num4{transform: translate(108%, -29%); border:none}
+
+    #num5{transform: translate(-205%, 90%); border:none}
+    #num6{transform: translate(-103%, 90%); border:none}
+    #num7{transform: translate(3%, 90%); border:none}
+    #num8{transform: translate(108%, 90%); border:none}
+
+    #num9{transform: translate(-205%, 209%); border:none}
+    #num10{transform: translate(-103%, 209%); border:none}
+    #num11{transform: translate(3%, 209%); border:none}
+    #num12{transform: translate(108%, 209%); border:none}
+
+    #num13{transform: translate(-205%, 325%); border:none}
+    #num14{transform: translate(-103%, 325%); border:none}
+    #num15{transform: translate(3%, 325%); border:none}
+    #num16{transform: translate(108%, 325%); border:none}
+
+#divDecoder{background-color: rgba(0, 0, 0, 0.2); border-radius: 40px; position:absolute; width: 900px; height: 490px; margin:40px auto;margin-left: auto; margin-right: auto; left: 0; right: 0; z-index: 5; transform: scale(0); box-shadow:  0 0 3em black}
+#decoderBox{width: 850px; height: 450px; margin: 25px}
+
+.divBox{width:387px; height: 400px; background-color:rgba(0, 0, 0, 0.2); padding: 5px; border-radius: 30px}
+#divEsquerda{float:left ; margin: 15px 15px 0px 15px;}
+#divDireita{float: right; margin: 15px 15px 15px 0;}
+    .tipo{width:357px; padding: 8px; margin: 15px 15px 15px 15px; border-radius: 5px; font: 14px Roboto, sans-serif; background-color: rgba(0, 0, 0, 0.2); border: none; color: white;}
+        option{background-color: #2d4d91;}
+            
+    .inputBox{width: 357px; height:265px ;margin: 0 15px 15px 15px; resize: none; box-sizing: border-box; border-radius: 5px; background-color: rgba(0, 0, 0, 0.2); border: none; color: white; padding: 10px; font-size: 16px; }
+    .decBotoes{width: 357px; padding: 8px; margin: 0 15px 15px 15px; border-radius: 10px; font: 14px Roboto, sans-serif; border: none; cursor: pointer;} 
+    .sinal{margin: 0 15px 15px 15px; padding: 8px; width: 36px; float: left; border-radius: 10px; cursor: pointer; border: none; background-color: rgba(0, 0, 0, 0.2); color: white;}
+    .numBox{margin: 0 15px 15px 0; padding: 8px; display: inline-block; border-radius: 5px; border: none; width: 38px; background-color:rgba(0, 0, 0, 0.2); color: white; }
+
+#credit{display:inline;text-decoration: none;margin-bottom:10px;position:fixed;z-index:1 ;bottom: 0 ;font: 16px Roboto, sans-serif; font-weight:400;color: rgb(10, 10, 10); text-shadow: 0px 0px 12px black, 0px 0px 12px black; cursor: pointer; left: 50%;transform: translateX(-50%)}
+
+        @media (max-width: 900px){
+            #decoderBox{width: 50px}
+            #divDecoder{height: 910px; width: 450px; zoom: 75%;}
+            #divEsquerda{float:none ;margin: 15px 15px 0px 0px;}
+            #divDireita{float:none ;margin: 35px 15px 0px 0px;}
+
+            #caixa{width: 70%;}
+            .iconesMenu{transform: scale(0.8); margin:20px ;}
+            #divLogo{transform: translate(-50%, -20%) scale(0.6);}
+        }
+
+    @media (max-width: 700px){
+        #decoderBox{width: 50px}
+        #divDecoder{height: 900px; width: 450px; zoom: 75%;}
+        #divEsquerda{float:none ;margin: 15px 15px 0px 0px;}
+        #divDireita{float:none ;margin: 35px 15px 0px 0px;}
+
+        #divCalculadora{zoom:80%}
+        
+        #caixa{width: 80%; transform:translate(-50%, -50%) scale(0.9)}
+        .iconesMenu{transform: scale(0.8); margin:10px ;}
+        #divLogo{transform: translate(-50%, -20%) scale(0.6);}
+
+        #credit{font-size: 14px;}
+    }
+@media (max-width: 400px){
+    #decoderBox{width: 50px}
+    #divDecoder{height: 900px; width: 450px; zoom: 65%;}
+    #divEsquerda{float:none ;margin: 15px 15px 0px 0px;}
+    #divDireita{float:none ;margin: 35px 15px 0px 0px;}
+
+    #divCalculadora{zoom:70%}
+    #caixa{width: 90%; transform: translate(-50%, -50%) scale(0.6)}
+    .iconesMenu{transform: scale(0.7); margin:0px ;}
+    #divLogo{transform: translate(-50%, -30%) scale(0.4);}
+
+    #credit{font-size: 11px;}
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Básica</title>
+    <link rel="icon" href="imagens/calculator.png"> 
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<img src="imagens/background.jpg" draggable="false" id="background">
+
+<div id=divLogo>
+    <img src="imagens/calculator.png" draggable="false"  id="logoImg"><p id=logoTexto>Calculator</p>
+</div>
+
+<div id="circle1" onclick="fecharCalculadora()"><img src=imagens/backcalc.png id="imgCalc" draggable="false" height=100% style="position: fixed; z-index: -10; "></div>
+    
+<div id="circle2" onclick="fecharDecoder()"><img src=imagens/back.png draggable="false" id="imgDecoder" height=100% style="position: fixed; z-index: -10; "></div>
+
+<div id="caixa">
+    <div class="iconesMenu" style="background-color: rgb(189, 189, 189)">
+        <div class=iconInfo onclick="abrirCalculadora()"><div class="infoText">Calculadora</br>Simples</div></div><img src="imagens/calculadora.png" draggable="false" width="75%" height="75%" style="margin-top: 22px;">
+    </div>
+   
+
+</div>
+
+<div id="divCalculadora">
+    <div id="displayBox">
+        <p id="display"></p>
+    </div>
+        <div id="botoes">
+
+            <button class ="botoes" id="num1" onclick="check();addSoma();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">+</div></button>
+            <button class ="botoes" id="num2" onclick="check();addSub();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">-</div></button>
+            <button class ="botoes" id="num3" onclick="check();addMult();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">X</div></button>
+            <button class ="botoes" id="num4" onclick="check();addDiv();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">÷</div></button>
+
+            <button class ="botoes" id="num5" onclick="check();addUm();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">1</div></button>
+            <button class ="botoes" id="num6" onclick="check();addDois();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">2</div></button>
+            <button class ="botoes" id="num7" onclick="check();addTres();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">3</div></button>
+            <button class ="botoes" id="num8" onclick="check();addZero();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">0</div></button>
+
+            <button class ="botoes" id="num9" onclick="check();addQuatro();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">4</div></button>
+            <button class ="botoes" id="num10" onclick="check();addCinco();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">5</div></button>
+            <button class ="botoes" id="num11" onclick="check();addSeis();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">6</div></button>
+            <button class ="botoes" id="num12" onclick="Clear();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">C</div></button>
+
+            <button class ="botoes" id="num13" onclick="check();addSete();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">7</div></button>
+            <button class ="botoes" id="num14" onclick="check();addOito();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">8</div></button>
+            <button class ="botoes" id="num15" onclick="check();addNove();refresh()"><img draggable="false" src="imagens/botao.png" width="47px"><div id="textoBot">9</div></button>
+            <button class ="botoes" id="num16" onclick="check();Equal();refresh()"><img draggable="false" src="imagens/botao2.png" width="47px"><div id="textoBot">=</div></button>
+        </div>
+    <img id="Calculadora" draggable="false" src="imagens/calculadora.png">
+   
+</div>
+
+<!--CODIFICADOR ======================================
+
+-->
+<!--
+<div id="divDecoder">
+    <div id=decoderBox>
+        <div id="divEsquerda" class="divBox">
+            <div class=select>
+                <select onchange="codeCheck()" class="tipo" id="codeTipo">
+                    <option>Selecione a linguagem</option>
+                    <option value="base64">Base64</option>
+                    <option value="cesar">Cifra de César</option>
+                    <option value="binario">Binário</option>
+                </select>
+            </div>
+            <textarea class="inputBox" id="codeBox"></textarea>
+            <button id="sinal" class="sinal" style="display: none;" onclick="toggleCodeBut()">+</button>
+            <input type="number" min=0 max=25 class="numBox" id="numBox" style="display: none;">
+            <button id="codeBut" onclick="code()" class="decBotoes">Codificar</button>
+        </div>
+
+        <div id=divDireita class="divBox">
+            <div class="select">
+                <select onchange="decodeCheck()" class="tipo" id="decodeTipo">
+                    <option>Selecione a linguagem</option>
+                    <option value="base64">Base64</option>
+                    <option value="cesar">Cifra de César</option>
+                    <option value="binario">Binário</option>
+                </select>
+            </div>
+            <textarea type="text" class="inputBox" id="decodeBox"></textarea>
+            <button id="decoSinal" class="sinal" style="display: none;" onclick="toggleDecodeBut()">+</button>
+            <input type="number" min=0 max=25 class="numBox" id="decoNumBox" size="1" style="display: none;">
+            <button id=decodeBut onclick="decode()" class="decBotoes">Decodificar</button>
+        </div>
+    </div>
+</div>
+-->
+<!--CODIFICADOR =================================
+
+-->
+
+<p onclick="link()" id="credit">Copyright &copy; KDSH DEV / Desenvolvimento FullStack</p>
+
+</body>
+
+    <script>
+    function link(){
+        window.open("https://www.linkedin.com/in/rogeriogomes2009/", "_blank")}
+    </script>
+    <script src=calculadora.js></script>
+    <script src=decodificador.js></script>
+</html>
